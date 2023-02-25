@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sws:
+    image: localhost/sws
+    build: .
+    volumes: 
+      - ./text.log:/usr/src/app/text.log
+    container_name: dc_sws
