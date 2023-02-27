@@ -9,4 +9,6 @@ Primary Learning Data Engineering Resource (DE Zoomcamp + other resources)
       * Youtube Playlist - https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb
 
 3. `New Homeserver`
+      1. Terraform Create Homelab
+      2. Docker compose created jellyfin and transmission server
 
