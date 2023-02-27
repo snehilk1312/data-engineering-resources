@@ -7,3 +7,6 @@ Primary Learning Data Engineering Resource (DE Zoomcamp + other resources)
       * Main Repo - https://github.com/DataTalksClub/data-engineering-zoomcamp
       * Data Source Repo - https://github.com/DataTalksClub/nyc-tlc-data
       * Youtube Playlist - https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb
+
+3. `New Homeserver`
+
