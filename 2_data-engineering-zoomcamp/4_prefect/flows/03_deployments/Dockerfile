@@ -4,4 +4,4 @@ COPY docker-requirements.txt .
 RUN pip install -r docker-requirements.txt --trusted-host pypi.python.org --no-cache-dir
 
 COPY parameterized_etl_web_to_gcs.py /opt/prefect/flows/parameterized_etl_web_to_gcs.py
-RUN mkdir -p /opt/prefect/data
+RUN mkdir -p /opt/prefect/data/yellow
