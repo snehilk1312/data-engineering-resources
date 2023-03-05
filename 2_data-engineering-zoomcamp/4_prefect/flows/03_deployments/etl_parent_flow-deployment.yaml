@@ -1,0 +1,58 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: etl_web_gcs
+description: null
+version: 95559d744fc753934b65c3bd0d1817a1
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+storage: null
+path: /home/snehil/Desktop/data-engineering-zoomcamp-learn/week2/prefect/flows/03_deployments
+entrypoint: parameterized_etl_web_to_gcs.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    year:
+      title: year
+      default: 2021
+      position: 0
+      type: integer
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 1
+      type: array
+      items: {}
+    color:
+      title: color
+      default: yellow
+      position: 2
+      type: string
+  required: null
+  definitions: null
+timestamp: '2023-03-05T06:02:27.586003+00:00'
