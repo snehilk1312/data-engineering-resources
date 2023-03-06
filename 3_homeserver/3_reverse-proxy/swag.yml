@@ -1,0 +1,21 @@
+---
+version: "2.1"
+services:
+  swag:
+    image: lscr.io/linuxserver/swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000 # your user and group ids
+      - PGID=1000 # get it with typing `id` in terminal
+      - TZ=Asia/Kolkata # Docker available time zone regions
+      - URL=your-domain.com  # the domain name that you bought
+      - SUBDOMAINS=www,jellyfin,code-server # the subdomains which serves the specific traffic
+      - VALIDATION=http
+    volumes:
+      - ./swag:/config
+    ports:
+      - 443:443
+      - 80:80
+    restart: unless-stopped
