@@ -7,7 +7,7 @@
     case {{ column_name }} 
         when 'NaN'::numeric 
         then NULL
-        else CAST(column_name as numeric)
+        else CAST({{column_name}} as numeric)
     end
 
 
