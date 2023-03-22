@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_green_tripdata
+    description: New york taxi green trip data
+    columns:
+      - name: trip_id
+        description: unique trip id for each trip .
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+               severity: warn
+      - name: pickup_locationid
+        description: location id where the meter was engaged
+        tests:
+          - custom_relationship_test:
+              ref_model: ref('taxi_zone_lookup')
+              ref_column: "LocationID"
+              severity: warn
+      - name: payment_type
+        description: a numeric value, classifying the way in which customer paid for the trip
+        tests:
+          - accepted_values:
+              values: "{{ var('payment_type_values') }}"
+              quote: false
+  - name: stg_yellow_tripdata
+    description: New york taxi yellow trip data
+    columns:
+      - name: trip_id
+        description: unique trip id for each trip .
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+               severity: warn
+      - name: pickup_locationid
+        description: location id where the meter was engaged
+        tests:
+          - custom_relationship_test:
+              ref_model: ref('taxi_zone_lookup')
+              ref_column: "LocationID"
+              severity: warn
+      - name: payment_type
+        description: a numeric value, classifying the way in which customer paid for the trip
+        tests:
+          - accepted_values:
+              values: "{{ var('payment_type_values') }}"
+              quote: false

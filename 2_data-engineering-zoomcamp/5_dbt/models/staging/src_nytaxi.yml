@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: staging_sources
+    description: defining sources for staging models here
+    database: ny_taxi # change to 'eco-world-378913' for bigquery
+    schema: snehil_bqdataset
+    tables:
+      - name: green_taxi_data
+        description: green taxi trips data
+      - name: yellow_taxi_data
+        description: yellow taxi trips data
