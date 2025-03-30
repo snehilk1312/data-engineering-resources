@@ -41,7 +41,7 @@ copy github_events from '/tmp/events.csv' with csv;
 SELECT count(*) FROM github_users;
 
 -- number of commits per minute by using
-the number of distinct commits in each push event
+--the number of distinct commits in each push event
 SELECT date_trunc('minute', created_at) AS minute,
 sum((payload->>'distinct_size')::int) AS num_commits
 FROM github_events
