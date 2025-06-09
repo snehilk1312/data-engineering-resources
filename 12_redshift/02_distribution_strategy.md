@@ -169,4 +169,4 @@ JOIN small_dim sd ON bf.dim_id = sd.dim_id;
 
 --- 
 One distribution plan can change into other depending on cluster configuration,size,etc.
-    * eg:  DS_DIST_BOTH  -> DS_BCAST_INNER
+- eg:  DS_DIST_BOTH  -> DS_BCAST_INNER
